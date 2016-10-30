@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <cartoon-viewer></cartoon-viewer>
+    <h1>Hello App!</h1>
+    <p>
+      <router-link to="/foo">Go to Foo</router-link>
+      <router-link to="/foo/bar">Go to Bar</router-link>
+      <router-link to='/cartoon'>Go to Cartoon Viewer</router-link>
+    </p>
+  <router-view></router-view>
   </div>
 </template>
 
