@@ -1,22 +1,17 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
-import Foo from './components/Foo'
-import CartoonViewer from './components/CartoonViewer'
 
 Vue.use(VueRouter)
 
-const Bar = { template: '<div>bar</div>' }
+import Home from './components/Home'
+import Editor from './components/Editor'
+import Story from './components/Story'
 
 const routes = [
-  {
-    path: '/foo',
-    component: Foo,
-    children: [
-      { path: 'bar', component: Bar }
-    ]
-  },
-  { path: '/cartoon', component: CartoonViewer }
+  { path: '/', component: Home },
+  { path: '/editor', component: Editor },
+  { path: '/story/:id', component: Story }
 ]
 
 const router = new VueRouter({

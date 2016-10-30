@@ -2,22 +2,31 @@
   <div id="app">
     <h1>Hello App!</h1>
     <p>
-      <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/foo/bar">Go to Bar</router-link>
-      <router-link to='/cartoon'>Go to Cartoon Viewer</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/editor">New Story</router-link>
+      <router-link to='/story/1'>Go to first story</router-link>
     </p>
-  <router-view></router-view>
+  <router-view :stories='stories'></router-view>
   </div>
 </template>
 
 <script>
-import CartoonViewer from './components/CartoonViewer'
-
 export default {
   name: 'app',
-  components: {
-    CartoonViewer
-  }
+  data: () => ({
+    stories: [
+      {
+        id: 1,
+        title: 'title A',
+        content: 'content A'
+      },
+      {
+        id: 2,
+        title: 'title B',
+        content: 'content B'
+      }
+    ]
+  })
 }
 </script>
 
