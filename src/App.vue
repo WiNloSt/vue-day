@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <cartoon-viewer></cartoon-viewer>
   </div>
 </template>
